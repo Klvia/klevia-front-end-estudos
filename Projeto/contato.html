@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="light-mode">
+    <!-- BOTÃO DARK/LIGHT MODE -->
+        <button id="btn-theme-toggle" title="Alternar tema"></button>
+    <header>
+        <a href="home.html" class="logo">
+            <img src="img/logo-coffeecode.png" height="75px" alt="Coffee Code Logo">
+        </a>
+        <p id="titulo3">CONTATO</p>
+        <nav id="menu-principal">
+            
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sobre.html">Menu</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <button type="button" id="btn-menu-mobile"></button>
+    </header>
+
+    <main>
+         <section>
+         <h2>Entre em Contato Conosco</h2>
+         <p>Use o formulário abaixo para tirar dúvidas, dar sugestões ou fazer reclamações.</p>
+         <hr>
+         <form action="#">Enviar Contato</form><br>
+
+       </section>
+       <section id="formulario">
+    <div>
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" 
+               id="nome" 
+               name="nome"
+               placeholder="Ex: Maria da Silva"
+               required
+               maxlength="100">
+    </div>
+</section>
+
+        <br>
+        <div>
+            <option value="campo obrigato" disabled selected></option>
+            <label for="email">Email de Contato:</label><br>
+            <input type="email" id="email" name="email"
+                       placeholder="exemplo@dominio.com"
+                       required
+                       maxlength="150">
+
+        </div>
+        <br>
+           <div>
+                <label for="telefone">Telefone (Obrigatório):</label><br>
+                <input type="tel" id="telefone" name="telefone" required
+                       placeholder="(XX) 9XXXX-XXXX"
+                       pattern="^\(\d{2}\) \d{4,5}-\d{4}$">
+                <small>Formato: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX </small>
+            </div>
+ 
+    <form action="/enviar-contato" method="POST">
+
+        <br>
+
+        <div>
+            <label for="tipo_contato">Assunto Principal:</label>
+            <select id="tipo_contato" name="tipo_contato" required>
+                <option value="" disabled selected>-- Selecione o Motivo --</option> 
+                <option value="duvida">Dúvida sobre o site/serviço</option>
+                <option value="sugestao">Sugestão de melhoria</option>
+                <option value="reclamacao">Reclamação ou problema técnico</option>
+                <option value="parceria">Proposta de Parceria</option>
+            </select>
+        </div>
+        <br>
+          <label for="mensagem">Detalhes da Mensagem:</label>
+        <div>
+         
+            <textarea id="mensagem" name="mensagem" rows="6" cols="50"
+                      placeholder="Descreva aqui sua mensagem em detalhes..."
+                      required></textarea>
+        </div>
+        <br>
+        <button>Enviar</button>
+
+
+       </section>
+    </main>
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="btn-voltar-topo" title="Voltar ao topo"></button>
+    <footer>
+        <p class="copy">&copy; 2025 Coffee Code. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
